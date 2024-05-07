@@ -49,7 +49,7 @@ public class Employee {
 
 //	method for raising salary with specified percentage
 	int raiseSalary(int percent) {
-		salary *= percent / 100;
+		salary += percent / 100;
 		return salary;
 	}
 
@@ -66,6 +66,6 @@ public class Employee {
 //		Object creation for Employee class with id, first name, last name and salary by raising the salary
 		Employee employee2 = new Employee(1002, "Matthew", "Murdock", 20000);
 		employee2.raiseSalary(20);
-		System.out.println(employee2.toString() + " " + (float)20/100);
+		System.out.println(employee2.toString() + " | Annual Salary: " + employee2.getSalary());
 	}
 }
